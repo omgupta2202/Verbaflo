@@ -48,3 +48,22 @@ I had prior experience with the OpenAI API, which was useful for understanding h
 
 3. **Access the Application**:
    - Open your web browser and navigate to `http://127.0.0.1:8000` to access the web interface.
+
+
+### Use-
+
+## Step1: Enter your API key and hit enter
+![Gemini API Example](img/1.png)
+
+## Step2: Click on Upload PDF Resume
+![Gemini API Example](img/2.png)
+
+## Step3: Upload resume and hit upload
+![Gemini API Example](img/3.png)
+
+## Step4: Wait for 5-7 seconds the html resume will be downloaded.
+
+### Sample Files
+
+- **Sample PDF**: [sample.pdf](sample.pdf)
+- **Sample HTML Resume**: [sample.html](sample.html)
