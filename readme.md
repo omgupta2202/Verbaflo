@@ -20,6 +20,8 @@ The OpenAI API implementation is included in `main2.py`. However, due to a lack 
 
 I had prior experience with the OpenAI API, which was useful for understanding how to interact with AI models. For extracting text from PDFs, I used resources on Stack Overflow to solve module-related issues such as pdf to text extractor. I used Gemini, OpenAI documentation. I also used Postman to understand the response format of the Gemini API.
 
+### Project is deployed in AWS
+
 ### Note
 
 - **Gemini API**: Deployed and functioning as expected. The code for interacting with Gemini API is in `main.py`.
