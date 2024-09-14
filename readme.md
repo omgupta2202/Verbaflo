@@ -1,6 +1,6 @@
 # HTML Resume Generator
 
-# For demo purpose use my Gemini Api Key: 'AIzaSyDpH1VM0-6GbRP6J1R4vhHmkoUxKouCVvA'
+### For demo purpose use my Gemini Api Key: 'AIzaSyDpH1VM0-6GbRP6J1R4vhHmkoUxKouCVvA'
 
 ## Project Overview
 
