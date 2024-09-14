@@ -1,64 +1,48 @@
-# PDF to HTML Resume Generator
+# HTML Resume Generator
 
-This FastAPI application allows users to upload a LinkedIn PDF resume, extract its text, and generate a professional HTML resume using either the Gemini API or the OpenAI API. The application then provides the generated HTML resume as a downloadable file.
+## For demo purpose use my Gemini Api Key: 'AIzaSyDpH1VM0-6GbRP6J1R4vhHmkoUxKouCVvA'
 
-## Features
+## Project Overview
 
-- Upload PDF resumes
-- Extract text from PDF files
-- Generate HTML resumes from extracted text
-- Download the generated HTML resume
+This project involves creating a web application that generates an HTML resume from a LinkedIn PDF using APIs. Due to limitations with API credits, the application uses the Gemini API from Google for content generation. The OpenAI API implementation is also included but not used in the final version.
 
-## Technologies
+## Approach
 
-- **FastAPI**: Framework for building APIs
-- **pdfplumber**: Library for extracting text from PDF files
-- **requests**: Library for making HTTP requests (for Gemini API)
-- **openai**: OpenAI API client library (for OpenAI API)
-- **aiofiles**: Asynchronous file operations
+### Gemini API Implementation
 
-## Installation
+Since I did not have access to OpenAI API credits, I utilized the Google Gemini API, which is free. The code for using the Gemini API is included in `main.py`. The Gemini API generates the HTML resume based on the text extracted from the PDF.
 
-1. Clone the repository:
+### OpenAI API Implementation
 
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
+The OpenAI API implementation is included in `main2.py`. However, due to a lack of credits, this implementation was not used in the final version. The code for OpenAI is provided for reference and can be activated if you have access to OpenAI credits.
 
-2. Create and activate a virtual environment:
+### Project Development
 
-    ```bash
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    ```
+I had prior experience with the OpenAI API, which was useful for understanding how to interact with AI models. For extracting text from PDFs, I used resources on Stack Overflow to solve module-related issues such as pdf to text extractor. I used Gemini, OpenAI documentation. I also used Postman to understand the response format of the Gemini API.
 
-3. Install the required dependencies:
+### Note
 
-    ```bash
-    pip install fastapi uvicorn pdfplumber requests openai aiofiles python-multipart
-    ```
+- **Gemini API**: Deployed and functioning as expected. The code for interacting with Gemini API is in `main.py`.
+- **OpenAI API**: The code is available in `main2.py`. Due to insufficient credits, this was not used in the final deployment but can be activated with the appropriate API key.
 
-4. Set up your API keys:
+## Setup
 
-    - For Gemini API, replace `GEMINI_API_KEY` in the code with your actual API key.
-    - For OpenAI API, replace `OPENAI_API_KEY` in the code with your actual API key.
+1. **Install Dependencies**: 
+   - Install dependencies using:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
-## Running the Application
+2. **Run the Application**:
+   - Start the FastAPI application:
+     ```bash
+     uvicorn main:app --reload
+     ```
 
-1. Start the FastAPI server:
+   - For the OpenAI version:
+     ```bash
+     uvicorn main2:app --reload
+     ```
 
-    ```bash
-    uvicorn main:app --reload
-    ```
-
-2. Open your web browser and go to `http://127.0.0.1:8000` to access the upload form.
-
-## API Endpoints
-- `POST /upload/`: Handles PDF upload, processes the file, generates HTML resume, and provides a download link for the HTML file.
-
-## Example Usage
-
-1. Navigate to `http://127.0.0.1:8000` in your browser.
-2. Upload a LinkedIn PDF resume.
-3. The application extracts the text, generates an HTML resume, and provides a downloadable HTML file.
+3. **Access the Application**:
+   - Open your web browser and navigate to `http://127.0.0.1:8000` to access the web interface.
